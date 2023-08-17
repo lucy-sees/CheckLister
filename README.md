@@ -38,10 +38,10 @@
 <details>
   <summary>Client</summary>
   <ul>
-    <li>HTML</li>
-    <li>JavaScript</li>
-    <li>CSS</li>
-    <li>Bootstrap</li>
+    <li><a href="https://html.com/">HTML</a></li>
+    <li><a href="https://www.css3.com/">CSS</a></li>
+    <li><a href="https://www.javascript.com/">JavaScript</a></li>
+    <li><a href="https://getbootstrap.com/">Bootstrap</a></li>
     </ul>
 </details>
 
