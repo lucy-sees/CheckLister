@@ -4,14 +4,13 @@ body {
 }
 
 .body-wrapper {
-  background-color: rgb(168, 12, 150);
-  background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  background-color: rgba(168, 12, 155, 0.711);
 }
 
 .list-container {
   text-transform: capitalize;
   color: #fff;
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 ul {
