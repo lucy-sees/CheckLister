@@ -2,7 +2,7 @@ import './style.css';
 import { addToArr, removeFromArr, updateArr } from './add-remove-update.js';
 
 const tasksArr = [];
-let img = document.createElement('i');
+
 let del = document.createElement('i');
 let edt = document.createElement('i');
 let sav = document.createElement('i');
