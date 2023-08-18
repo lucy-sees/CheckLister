@@ -20,6 +20,7 @@ export const addToArr = (val, arr) => {
 
 export const appendList = (i, arr) => {
   const ul = document.querySelector('.list-container');
+
   const li = document.createElement('li');
   li.className = 'todo-li-elements';
   const check = document.createElement('input');
@@ -43,5 +44,11 @@ export const appendList = (i, arr) => {
 
 export const removeFromArr = (index, arr) => {
   arr.splice(index - 1, 1);
-  reorder(arr);
+  // reorder(arr);
+};
+
+export const updateArr = (index, newVal, arr) => {
+  arr[index - 1].description = newVal;
+  // saveToLocal(arr);
+  localStorage.setItem('myList', JSON.stringify(arr));
 };
