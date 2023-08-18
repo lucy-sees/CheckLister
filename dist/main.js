@@ -653,6 +653,7 @@ const ul = document.querySelector('.list-container');
 const sortArr = () => {
   tasksArr.sort((a, b) => a.index - b.index);
 };
+
 const generateList = () => {
   for (let i = 0; i < tasksArr.length; i += 1) {
     const li = document.createElement('li');
@@ -664,6 +665,11 @@ const generateList = () => {
     li.append(lbl);
     lbl.append(check);
     lbl.innerHTML += tasksArr[i].description;
+
+    const threeDots = document.createElement('i');
+    threeDots.className = 'fa-solid fa-ellipsis-vertical';
+    threeDots.classList.add('threedots');
+    li.appendChild(threeDots);
   }
 };
 
@@ -687,6 +693,7 @@ input.addEventListener('keypress', (e) => {
     }
   }
 });
+
 
 })();
 
