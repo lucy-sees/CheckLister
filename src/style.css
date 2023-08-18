@@ -55,3 +55,25 @@ li {
   color: #fff;
   cursor: pointer;
 }
+
+i {
+  cursor: pointer;
+  float: right;
+  color: rgb(255, 253, 253);
+}
+
+.fa-arrow-turn-down {
+  transform: rotate(90deg);
+  opacity: 70%;
+}
+
+.fa-arrows-rotate {
+  margin-top: 1em;
+  margin-left: 5px;
+  opacity: 70%;
+}
+
+.fa-arrows-rotate:hover,
+.fa-arrow-turn-down:hover {
+  opacity: 100%;
+}
