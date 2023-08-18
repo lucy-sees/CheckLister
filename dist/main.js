@@ -555,34 +555,27 @@ module.exports = styleTagTransform;
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   add: () => (/* binding */ add),
-/* harmony export */   remove: () => (/* binding */ remove),
+/* harmony export */   addToArr: () => (/* binding */ addToArr),
+/* harmony export */   removeFromArr: () => (/* binding */ removeFromArr),
 /* harmony export */   reorder: () => (/* binding */ reorder)
 /* harmony export */ });
-const add = (val, arr) => {
+const addToArr = (val, arr) => {
   arr.push({
     description: val,
     completed: false,
     index: arr.length + 1,
   });
-  //   console.log(arr);
 };
-
-const remove = (index, arr) => {
-  arr.splice(index, 1);
-  //   reorder(arr);
-  for (let i = 0; i < arr.length; i += 1) {
-    arr[i].index = i + 1;
-  }
-  //   console.log(arr);
-};
-
-// export default add;
 
 const reorder = (arr) => {
   for (let i = 0; i < arr.length; i += 1) {
     arr[i].index = i + 1;
   }
+};
+
+const removeFromArr = (index, arr) => {
+  arr.splice(index - 1, 1);
+  reorder(arr);
 };
 
 /***/ })
@@ -698,20 +691,16 @@ const generateList = () => {
 };
 
 const appendList = (i) => {
-  // ul.innerHTML = "";
-  // for (let i = 0; i < tasksArr.length; i += 1) {
   const li = document.createElement('li');
   const check = document.createElement('input');
   const lbl = document.createElement('label');
   img = document.createElement('i');
   check.type = 'checkbox';
-  // check.name = tasksArr[tasksArr.length].index.toString();
   img.className = 'fa-solid fa-trash-can fa-xs';
   ul.append(li);
   li.append(lbl, img);
   lbl.append(check);
   lbl.innerHTML += tasksArr[i - 1].description;
-  // }
 };
 
 window.addEventListener('load', () => {
@@ -725,17 +714,16 @@ const input = document.getElementById('new-item');
 
 input.addEventListener('keypress', (e) => {
   if (e.key === 'Enter' && input.value) {
-    (0,_add_remove_js__WEBPACK_IMPORTED_MODULE_1__.add)(input.value, tasksArr);
+    (0,_add_remove_js__WEBPACK_IMPORTED_MODULE_1__.addToArr)(input.value, tasksArr);
     input.value = '';
     appendList(tasksArr.length);
-    // remove(0, tasksArr);
   }
 });
 
 const enterIcon = document.querySelector('.fa-arrow-turn-down');
 enterIcon.addEventListener('click', () => {
   if (input.value) {
-    (0,_add_remove_js__WEBPACK_IMPORTED_MODULE_1__.add)(input.value, tasksArr);
+    (0,_add_remove_js__WEBPACK_IMPORTED_MODULE_1__.addToArr)(input.value, tasksArr);
     input.value = '';
     appendList(tasksArr.length);
   }
@@ -747,10 +735,19 @@ if (refreshIcon) {
   });
 }
 
-img.addEventListener('click', () => {
-  // console.log(tasksArr);
-  // console.log(img.parentNode);
-  // remove(img.key, tasksArr);
+document.addEventListener('click', (e) => {
+  if (e.target.className === 'fa-solid fa-trash-can fa-xs') {
+    const delElementDOM = document.getElementsByClassName('todo-li-elements');
+    const delElementArr = e.target.parentNode;
+    let elementID;
+    for (let j = 0; j < delElementDOM.length; j += 1) {
+      if (delElementDOM[j] === delElementArr) {
+        elementID = j + 1;
+      }
+    }
+    e.target.parentNode.remove();
+    (0,_add_remove_js__WEBPACK_IMPORTED_MODULE_1__.removeFromArr)(elementID, tasksArr);
+  }
 });
 })();
 
