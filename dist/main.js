@@ -34,6 +34,22 @@ ___CSS_LOADER_EXPORT___.push([module.id, `body {
   text-transform: capitalize;
   color: #fff;
   font-size: 1rem;
+  width: 100%;
+}
+
+.check-box {
+  margin-right: 1em;
+}
+
+.text-box {
+  background-color: rgb(153, 51, 129);
+  color: #fff;
+  border: none;
+  font-style: italic;
+  margin-bottom: 0.7em;
+  box-shadow: #48064bc2 0 0 0 1px inset;
+  width: 80%;
+  align-self: center;
 }
 
 ul {
@@ -96,11 +112,20 @@ i {
   opacity: 70%;
 }
 
+.fa-trash-can,
+.fa-pe-to-square,
+.fa-floppy-disk {
+  opacity: 70%;
+}
+
+.fa-arrow-turn-down:hover,
 .fa-arrows-rotate:hover,
-.fa-arrow-turn-down:hover {
+.fa-trash-can:hover,
+.fa-pen-to-square:hover,
+.fa-floppy-disk:hover {
   opacity: 100%;
 }
-`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;EACE,SAAS;EACT,UAAU;AACZ;;AAEA;EACE,2CAA2C;AAC7C;;AAEA;EACE,0BAA0B;EAC1B,WAAW;EACX,eAAe;AACjB;;AAEA;EACE,gBAAgB;EAChB,UAAU;AACZ;;AAEA;EACE,2CAA2C;EAC3C,eAAe;EACf,kBAAkB;AACpB;;AAEA;EACE,mCAAmC;EACnC,WAAW;EACX,YAAY;EACZ,kBAAkB;EAClB,oBAAoB;EACpB,WAAW;AACb;;AAEA;EACE,WAAW;AACb;;AAEA;EACE,cAAc;EACd,iBAAiB;AACnB;;AAEA;EACE,gBAAgB;EAChB,kBAAkB;EAClB,yBAAyB;EACzB,eAAe;EACf,kBAAkB;AACpB;;AAEA;EACE,0BAA0B;EAC1B,WAAW;EACX,eAAe;AACjB;;AAEA;EACE,eAAe;EACf,YAAY;EACZ,yBAAyB;AAC3B;;AAEA;EACE,wBAAwB;EACxB,YAAY;AACd;;AAEA;EACE,eAAe;EACf,gBAAgB;EAChB,YAAY;AACd;;AAEA;;EAEE,aAAa;AACf","sourcesContent":["body {\n  margin: 0;\n  padding: 0;\n}\n\n.body-wrapper {\n  background-color: rgba(168, 12, 155, 0.711);\n}\n\n.list-container {\n  text-transform: capitalize;\n  color: #fff;\n  font-size: 1rem;\n}\n\nul {\n  list-style: none;\n  padding: 0;\n}\n\nli {\n  border-bottom: 1px solid rgb(103, 103, 103);\n  padding-top: 5%;\n  padding-bottom: 5%;\n}\n\n#new-item {\n  background-color: rgb(153, 51, 150);\n  color: #fff;\n  border: none;\n  font-style: italic;\n  margin-bottom: 0.7em;\n  width: 100%;\n}\n\n::placeholder {\n  color: #fff;\n}\n\n.heading {\n  font-size: 1em;\n  margin-bottom: 5%;\n}\n\n.clear {\n  font-size: 0.5em;\n  text-align: center;\n  color: rgb(165, 193, 189);\n  padding-top: 5%;\n  padding-bottom: 5%;\n}\n\n.clear:hover {\n  text-decoration: underline;\n  color: #fff;\n  cursor: pointer;\n}\n\ni {\n  cursor: pointer;\n  float: right;\n  color: rgb(255, 253, 253);\n}\n\n.fa-arrow-turn-down {\n  transform: rotate(90deg);\n  opacity: 70%;\n}\n\n.fa-arrows-rotate {\n  margin-top: 1em;\n  margin-left: 5px;\n  opacity: 70%;\n}\n\n.fa-arrows-rotate:hover,\n.fa-arrow-turn-down:hover {\n  opacity: 100%;\n}\n"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;EACE,SAAS;EACT,UAAU;AACZ;;AAEA;EACE,2CAA2C;AAC7C;;AAEA;EACE,0BAA0B;EAC1B,WAAW;EACX,eAAe;EACf,WAAW;AACb;;AAEA;EACE,iBAAiB;AACnB;;AAEA;EACE,mCAAmC;EACnC,WAAW;EACX,YAAY;EACZ,kBAAkB;EAClB,oBAAoB;EACpB,qCAAqC;EACrC,UAAU;EACV,kBAAkB;AACpB;;AAEA;EACE,gBAAgB;EAChB,UAAU;AACZ;;AAEA;EACE,2CAA2C;EAC3C,eAAe;EACf,kBAAkB;AACpB;;AAEA;EACE,mCAAmC;EACnC,WAAW;EACX,YAAY;EACZ,kBAAkB;EAClB,oBAAoB;EACpB,WAAW;AACb;;AAEA;EACE,WAAW;AACb;;AAEA;EACE,cAAc;EACd,iBAAiB;AACnB;;AAEA;EACE,gBAAgB;EAChB,kBAAkB;EAClB,yBAAyB;EACzB,eAAe;EACf,kBAAkB;AACpB;;AAEA;EACE,0BAA0B;EAC1B,WAAW;EACX,eAAe;AACjB;;AAEA;EACE,eAAe;EACf,YAAY;EACZ,yBAAyB;AAC3B;;AAEA;EACE,wBAAwB;EACxB,YAAY;AACd;;AAEA;EACE,eAAe;EACf,gBAAgB;EAChB,YAAY;AACd;;AAEA;;;EAGE,YAAY;AACd;;AAEA;;;;;EAKE,aAAa;AACf","sourcesContent":["body {\n  margin: 0;\n  padding: 0;\n}\n\n.body-wrapper {\n  background-color: rgba(168, 12, 155, 0.711);\n}\n\n.list-container {\n  text-transform: capitalize;\n  color: #fff;\n  font-size: 1rem;\n  width: 100%;\n}\n\n.check-box {\n  margin-right: 1em;\n}\n\n.text-box {\n  background-color: rgb(153, 51, 129);\n  color: #fff;\n  border: none;\n  font-style: italic;\n  margin-bottom: 0.7em;\n  box-shadow: #48064bc2 0 0 0 1px inset;\n  width: 80%;\n  align-self: center;\n}\n\nul {\n  list-style: none;\n  padding: 0;\n}\n\nli {\n  border-bottom: 1px solid rgb(103, 103, 103);\n  padding-top: 5%;\n  padding-bottom: 5%;\n}\n\n#new-item {\n  background-color: rgb(153, 51, 150);\n  color: #fff;\n  border: none;\n  font-style: italic;\n  margin-bottom: 0.7em;\n  width: 100%;\n}\n\n::placeholder {\n  color: #fff;\n}\n\n.heading {\n  font-size: 1em;\n  margin-bottom: 5%;\n}\n\n.clear {\n  font-size: 0.5em;\n  text-align: center;\n  color: rgb(165, 193, 189);\n  padding-top: 5%;\n  padding-bottom: 5%;\n}\n\n.clear:hover {\n  text-decoration: underline;\n  color: #fff;\n  cursor: pointer;\n}\n\ni {\n  cursor: pointer;\n  float: right;\n  color: rgb(255, 253, 253);\n}\n\n.fa-arrow-turn-down {\n  transform: rotate(90deg);\n  opacity: 70%;\n}\n\n.fa-arrows-rotate {\n  margin-top: 1em;\n  margin-left: 5px;\n  opacity: 70%;\n}\n\n.fa-trash-can,\n.fa-pe-to-square,\n.fa-floppy-disk {\n  opacity: 70%;\n}\n\n.fa-arrow-turn-down:hover,\n.fa-arrows-rotate:hover,\n.fa-trash-can:hover,\n.fa-pen-to-square:hover,\n.fa-floppy-disk:hover {\n  opacity: 100%;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -547,17 +572,18 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
-/***/ "./src/add-remove.js":
-/*!***************************!*\
-  !*** ./src/add-remove.js ***!
-  \***************************/
+/***/ "./src/add-remove-update.js":
+/*!**********************************!*\
+  !*** ./src/add-remove-update.js ***!
+  \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   addToArr: () => (/* binding */ addToArr),
 /* harmony export */   removeFromArr: () => (/* binding */ removeFromArr),
-/* harmony export */   reorder: () => (/* binding */ reorder)
+/* harmony export */   reorder: () => (/* binding */ reorder),
+/* harmony export */   updateArr: () => (/* binding */ updateArr)
 /* harmony export */ });
 const addToArr = (val, arr) => {
   arr.push({
@@ -576,6 +602,10 @@ const reorder = (arr) => {
 const removeFromArr = (index, arr) => {
   arr.splice(index - 1, 1);
   reorder(arr);
+};
+
+const updateArr = (index, newVal, arr) => {
+  arr[index - 1].description = newVal;
 };
 
 /***/ })
@@ -661,12 +691,15 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
-/* harmony import */ var _add_remove_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./add-remove.js */ "./src/add-remove.js");
+/* harmony import */ var _add_remove_update_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./add-remove-update.js */ "./src/add-remove-update.js");
 
 
 
 const tasksArr = [];
 let img = document.createElement('i');
+let del = document.createElement('i');
+let edt = document.createElement('i');
+let sav = document.createElement('i');
 
 const ul = document.querySelector('.list-container');
 
@@ -678,29 +711,43 @@ const generateList = () => {
   for (let i = 0; i < tasksArr.length; i += 1) {
     const li = document.createElement('li');
     const check = document.createElement('input');
-    const lbl = document.createElement('label');
-    img = document.createElement('i');
+    const txt = document.createElement('label');
+    del = document.createElement('i');
+    edt = document.createElement('i');
+    sav = document.createElement('i');
     check.type = 'checkbox';
     check.name = tasksArr[i].index.toString();
-    img.className = 'fa-solid fa-trash-can fa-xs';
+    del.className = 'fa-solid fa-trash-can fa-xs';
+    edt.className = 'fa-regular fa-pen-to-square fa-xs';
+    sav.className = 'fa-regular fa-floppy-disk fa-xs';
+    sav.style.display = 'none';
     ul.append(li);
-    li.append(lbl, img);
-    lbl.append(check);
-    lbl.innerHTML += tasksArr[i].description;
+    li.append(txt, del, edt, sav);
+    txt.append(check);
+    txt.innerHTML += tasksArr[i].description;
   }
 };
 
 const appendList = (i) => {
   const li = document.createElement('li');
+  li.className = 'todo-li-elements';
   const check = document.createElement('input');
-  const lbl = document.createElement('label');
-  img = document.createElement('i');
+  const txt = document.createElement('input');
+  txt.type = 'text';
+  txt.className = 'text-box';
+  txt.readOnly = true;
+  del = document.createElement('i');
+  edt = document.createElement('i');
+  sav = document.createElement('i');
   check.type = 'checkbox';
-  img.className = 'fa-solid fa-trash-can fa-xs';
+  check.className = 'check-box';
+  del.className = 'fa-solid fa-trash-can fa-xs';
+  edt.className = 'fa-regular fa-pen-to-square fa-xs';
+  sav.className = 'fa-regular fa-floppy-disk fa-xs';
+  sav.style.display = 'none';
   ul.append(li);
-  li.append(lbl, img);
-  lbl.append(check);
-  lbl.innerHTML += tasksArr[i - 1].description;
+  li.append(check, txt, del, edt, sav);
+  txt.value += tasksArr[i - 1].description;
 };
 
 window.addEventListener('load', () => {
@@ -711,10 +758,9 @@ window.addEventListener('load', () => {
 });
 
 const input = document.getElementById('new-item');
-
 input.addEventListener('keypress', (e) => {
   if (e.key === 'Enter' && input.value) {
-    (0,_add_remove_js__WEBPACK_IMPORTED_MODULE_1__.addToArr)(input.value, tasksArr);
+    (0,_add_remove_update_js__WEBPACK_IMPORTED_MODULE_1__.addToArr)(input.value, tasksArr);
     input.value = '';
     appendList(tasksArr.length);
   }
@@ -723,7 +769,7 @@ input.addEventListener('keypress', (e) => {
 const enterIcon = document.querySelector('.fa-arrow-turn-down');
 enterIcon.addEventListener('click', () => {
   if (input.value) {
-    (0,_add_remove_js__WEBPACK_IMPORTED_MODULE_1__.addToArr)(input.value, tasksArr);
+    (0,_add_remove_update_js__WEBPACK_IMPORTED_MODULE_1__.addToArr)(input.value, tasksArr);
     input.value = '';
     appendList(tasksArr.length);
   }
@@ -732,8 +778,29 @@ enterIcon.addEventListener('click', () => {
 const refreshIcon = document.querySelector('.fa-arrows-rotate');
 if (refreshIcon) {
   refreshIcon.addEventListener('click', () => {
+    generateList();
   });
 }
+
+const saveFunc = (e) => {
+  const editTextBox = e.target.previousElementSibling.previousElementSibling
+    .previousElementSibling;
+  if (editTextBox.value) {
+    e.target.style.display = 'none';
+
+    e.target.previousElementSibling.style.display = 'block';
+    const delElementDOM = document.getElementsByClassName('todo-li-elements');
+    const delElementArr = e.target.parentNode;
+    let elementID;
+    for (let j = 0; j < delElementDOM.length; j += 1) {
+      if (delElementDOM[j] === delElementArr) {
+        elementID = j + 1;
+      }
+    }
+    (0,_add_remove_update_js__WEBPACK_IMPORTED_MODULE_1__.updateArr)(elementID, editTextBox.value, tasksArr);
+    editTextBox.readOnly = true;
+  }
+};
 
 document.addEventListener('click', (e) => {
   if (e.target.className === 'fa-solid fa-trash-can fa-xs') {
@@ -746,7 +813,19 @@ document.addEventListener('click', (e) => {
       }
     }
     e.target.parentNode.remove();
-    (0,_add_remove_js__WEBPACK_IMPORTED_MODULE_1__.removeFromArr)(elementID, tasksArr);
+    (0,_add_remove_update_js__WEBPACK_IMPORTED_MODULE_1__.removeFromArr)(elementID, tasksArr);
+  }
+
+  if (e.target.className === 'fa-regular fa-pen-to-square fa-xs') {
+    e.target.nextElementSibling.style.display = 'block';
+    e.target.style.display = 'none';
+    const editTextBox = e.target.previousElementSibling.previousElementSibling;
+    editTextBox.readOnly = false;
+    editTextBox.focus();
+  }
+
+  if (e.target.className === 'fa-regular fa-floppy-disk fa-xs') {
+    saveFunc(e);
   }
 });
 })();
