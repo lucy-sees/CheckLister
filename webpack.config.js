@@ -14,6 +14,13 @@ module.exports = {
       template: './src/index.html',
     }),
   ],
+  devtool: 'source-map',
+  devServer: {
+    static: path.join(__dirname, 'dist'),
+    compress: true,
+    port: 9000,
+    open: true,
+  },
   module: {
     rules: [
       {
