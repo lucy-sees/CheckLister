@@ -630,23 +630,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
 
 
-const tasksArr = [
-  {
-    description: 'Get out of bed',
-    completed: true,
-    index: 44,
-  },
-  {
-    description: 'Go to the gym',
-    completed: false,
-    index: 0,
-  },
-  {
-    description: 'Have breakfast',
-    completed: false,
-    index: 10,
-  },
-];
+const tasksArr = [];
 
 const ul = document.querySelector('.list-container');
 
@@ -693,7 +677,6 @@ input.addEventListener('keypress', (e) => {
     }
   }
 });
-
 
 })();
 
