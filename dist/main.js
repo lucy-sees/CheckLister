@@ -34,6 +34,27 @@ ___CSS_LOADER_EXPORT___.push([module.id, `body {
   text-transform: capitalize;
   color: #fff;
   font-size: 1rem;
+  width: 100%;
+  list-style: none;
+}
+
+/* .check-box {
+  margin-right: 1em;
+} */
+
+.text-box {
+  background-color: rgb(153, 51, 129);
+  color: #fff;
+  flex: 1;
+  margin: 0 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-style: italic;
+  margin-bottom: 0.7em;
+  box-shadow: #48064bc2 0 0 0 1px inset;
+  width: 80%;
+  align-self: center;
 }
 
 ul {
@@ -65,15 +86,14 @@ li {
   margin-bottom: 5%;
 }
 
-.clear {
-  font-size: 0.5em;
+.clear p{
   text-align: center;
   color: rgb(165, 193, 189);
   padding-top: 5%;
   padding-bottom: 5%;
 }
 
-.clear:hover {
+.clear p:hover {
   text-decoration: underline;
   color: #fff;
   cursor: pointer;
@@ -84,6 +104,14 @@ i {
   float: right;
   color: rgb(255, 253, 253);
 }
+
+/* Style for completed tasks */
+input[type="checkbox"]:checked + label {
+  text-decoration: line-through;
+  color: #888;
+  margin-right: 1em;
+}
+
 
 .fa-arrow-turn-down {
   transform: rotate(90deg);
@@ -96,11 +124,20 @@ i {
   opacity: 70%;
 }
 
+.fa-trash-can,
+.fa-pe-to-square,
+.fa-floppy-disk {
+  opacity: 70%;
+}
+
+.fa-arrow-turn-down:hover,
 .fa-arrows-rotate:hover,
-.fa-arrow-turn-down:hover {
+.fa-trash-can:hover,
+.fa-pen-to-square:hover,
+.fa-floppy-disk:hover {
   opacity: 100%;
 }
-`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;EACE,SAAS;EACT,UAAU;AACZ;;AAEA;EACE,2CAA2C;AAC7C;;AAEA;EACE,0BAA0B;EAC1B,WAAW;EACX,eAAe;AACjB;;AAEA;EACE,gBAAgB;EAChB,UAAU;AACZ;;AAEA;EACE,2CAA2C;EAC3C,eAAe;EACf,kBAAkB;AACpB;;AAEA;EACE,mCAAmC;EACnC,WAAW;EACX,YAAY;EACZ,kBAAkB;EAClB,oBAAoB;EACpB,WAAW;AACb;;AAEA;EACE,WAAW;AACb;;AAEA;EACE,cAAc;EACd,iBAAiB;AACnB;;AAEA;EACE,gBAAgB;EAChB,kBAAkB;EAClB,yBAAyB;EACzB,eAAe;EACf,kBAAkB;AACpB;;AAEA;EACE,0BAA0B;EAC1B,WAAW;EACX,eAAe;AACjB;;AAEA;EACE,eAAe;EACf,YAAY;EACZ,yBAAyB;AAC3B;;AAEA;EACE,wBAAwB;EACxB,YAAY;AACd;;AAEA;EACE,eAAe;EACf,gBAAgB;EAChB,YAAY;AACd;;AAEA;;EAEE,aAAa;AACf","sourcesContent":["body {\n  margin: 0;\n  padding: 0;\n}\n\n.body-wrapper {\n  background-color: rgba(168, 12, 155, 0.711);\n}\n\n.list-container {\n  text-transform: capitalize;\n  color: #fff;\n  font-size: 1rem;\n}\n\nul {\n  list-style: none;\n  padding: 0;\n}\n\nli {\n  border-bottom: 1px solid rgb(103, 103, 103);\n  padding-top: 5%;\n  padding-bottom: 5%;\n}\n\n#new-item {\n  background-color: rgb(153, 51, 150);\n  color: #fff;\n  border: none;\n  font-style: italic;\n  margin-bottom: 0.7em;\n  width: 100%;\n}\n\n::placeholder {\n  color: #fff;\n}\n\n.heading {\n  font-size: 1em;\n  margin-bottom: 5%;\n}\n\n.clear {\n  font-size: 0.5em;\n  text-align: center;\n  color: rgb(165, 193, 189);\n  padding-top: 5%;\n  padding-bottom: 5%;\n}\n\n.clear:hover {\n  text-decoration: underline;\n  color: #fff;\n  cursor: pointer;\n}\n\ni {\n  cursor: pointer;\n  float: right;\n  color: rgb(255, 253, 253);\n}\n\n.fa-arrow-turn-down {\n  transform: rotate(90deg);\n  opacity: 70%;\n}\n\n.fa-arrows-rotate {\n  margin-top: 1em;\n  margin-left: 5px;\n  opacity: 70%;\n}\n\n.fa-arrows-rotate:hover,\n.fa-arrow-turn-down:hover {\n  opacity: 100%;\n}\n"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;EACE,SAAS;EACT,UAAU;AACZ;;AAEA;EACE,2CAA2C;AAC7C;;AAEA;EACE,0BAA0B;EAC1B,WAAW;EACX,eAAe;EACf,WAAW;EACX,gBAAgB;AAClB;;AAEA;;GAEG;;AAEH;EACE,mCAAmC;EACnC,WAAW;EACX,OAAO;EACP,cAAc;EACd,YAAY;EACZ,sBAAsB;EACtB,kBAAkB;EAClB,kBAAkB;EAClB,oBAAoB;EACpB,qCAAqC;EACrC,UAAU;EACV,kBAAkB;AACpB;;AAEA;EACE,gBAAgB;EAChB,UAAU;AACZ;;AAEA;EACE,2CAA2C;EAC3C,eAAe;EACf,kBAAkB;AACpB;;AAEA;EACE,mCAAmC;EACnC,WAAW;EACX,YAAY;EACZ,kBAAkB;EAClB,oBAAoB;EACpB,WAAW;AACb;;AAEA;EACE,WAAW;AACb;;AAEA;EACE,cAAc;EACd,iBAAiB;AACnB;;AAEA;EACE,kBAAkB;EAClB,yBAAyB;EACzB,eAAe;EACf,kBAAkB;AACpB;;AAEA;EACE,0BAA0B;EAC1B,WAAW;EACX,eAAe;AACjB;;AAEA;EACE,eAAe;EACf,YAAY;EACZ,yBAAyB;AAC3B;;AAEA,8BAA8B;AAC9B;EACE,6BAA6B;EAC7B,WAAW;EACX,iBAAiB;AACnB;;;AAGA;EACE,wBAAwB;EACxB,YAAY;AACd;;AAEA;EACE,eAAe;EACf,gBAAgB;EAChB,YAAY;AACd;;AAEA;;;EAGE,YAAY;AACd;;AAEA;;;;;EAKE,aAAa;AACf","sourcesContent":["body {\n  margin: 0;\n  padding: 0;\n}\n\n.body-wrapper {\n  background-color: rgba(168, 12, 155, 0.711);\n}\n\n.list-container {\n  text-transform: capitalize;\n  color: #fff;\n  font-size: 1rem;\n  width: 100%;\n  list-style: none;\n}\n\n/* .check-box {\n  margin-right: 1em;\n} */\n\n.text-box {\n  background-color: rgb(153, 51, 129);\n  color: #fff;\n  flex: 1;\n  margin: 0 10px;\n  padding: 5px;\n  border: 1px solid #ccc;\n  border-radius: 5px;\n  font-style: italic;\n  margin-bottom: 0.7em;\n  box-shadow: #48064bc2 0 0 0 1px inset;\n  width: 80%;\n  align-self: center;\n}\n\nul {\n  list-style: none;\n  padding: 0;\n}\n\nli {\n  border-bottom: 1px solid rgb(103, 103, 103);\n  padding-top: 5%;\n  padding-bottom: 5%;\n}\n\n#new-item {\n  background-color: rgb(153, 51, 150);\n  color: #fff;\n  border: none;\n  font-style: italic;\n  margin-bottom: 0.7em;\n  width: 100%;\n}\n\n::placeholder {\n  color: #fff;\n}\n\n.heading {\n  font-size: 1em;\n  margin-bottom: 5%;\n}\n\n.clear p{\n  text-align: center;\n  color: rgb(165, 193, 189);\n  padding-top: 5%;\n  padding-bottom: 5%;\n}\n\n.clear p:hover {\n  text-decoration: underline;\n  color: #fff;\n  cursor: pointer;\n}\n\ni {\n  cursor: pointer;\n  float: right;\n  color: rgb(255, 253, 253);\n}\n\n/* Style for completed tasks */\ninput[type=\"checkbox\"]:checked + label {\n  text-decoration: line-through;\n  color: #888;\n  margin-right: 1em;\n}\n\n\n.fa-arrow-turn-down {\n  transform: rotate(90deg);\n  opacity: 70%;\n}\n\n.fa-arrows-rotate {\n  margin-top: 1em;\n  margin-left: 5px;\n  opacity: 70%;\n}\n\n.fa-trash-can,\n.fa-pe-to-square,\n.fa-floppy-disk {\n  opacity: 70%;\n}\n\n.fa-arrow-turn-down:hover,\n.fa-arrows-rotate:hover,\n.fa-trash-can:hover,\n.fa-pen-to-square:hover,\n.fa-floppy-disk:hover {\n  opacity: 100%;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -545,6 +582,103 @@ function styleTagTransform(css, styleElement) {
 }
 module.exports = styleTagTransform;
 
+/***/ }),
+
+/***/ "./src/add-remove.js":
+/*!***************************!*\
+  !*** ./src/add-remove.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   addToArr: () => (/* binding */ addToArr),
+/* harmony export */   appendList: () => (/* binding */ appendList),
+/* harmony export */   removeFromArr: () => (/* binding */ removeFromArr),
+/* harmony export */   reorder: () => (/* binding */ reorder),
+/* harmony export */   saveToLocal: () => (/* binding */ saveToLocal)
+/* harmony export */ });
+const saveToLocal = (arr) => {
+  localStorage.setItem('myList', JSON.stringify(arr));
+};
+
+const reorder = (arr) => {
+  for (let i = 0; i < arr.length; i += 1) {
+    arr[i].index = i + 1;
+  }
+  saveToLocal(arr);
+};
+
+const addToArr = (val, arr) => {
+  arr.push({
+    description: val,
+    completed: false,
+    index: arr.length + 1,
+  });
+  reorder(arr);
+};
+
+const appendList = (i, arr) => {
+  const ul = document.querySelector('.list-container');
+  const li = document.createElement('li');
+  li.className = 'todo-li-elements';
+  const check = document.createElement('input');
+  const txt = document.createElement('input');
+  txt.type = 'text';
+  txt.className = 'text-box';
+  txt.readOnly = true;
+  const del = document.createElement('i');
+  const edt = document.createElement('i');
+  const sav = document.createElement('i');
+  check.type = 'checkbox';
+  check.className = 'checkbox';
+  del.className = 'fa-solid fa-trash-can fa-xs';
+  edt.className = 'fa-regular fa-pen-to-square fa-xs';
+  sav.className = 'fa-regular fa-floppy-disk fa-xs';
+  sav.style.display = 'none';
+  ul.append(li);
+  li.append(check, txt, del, edt, sav);
+  txt.value += arr[i - 1].description;
+};
+
+const removeFromArr = (index, arr) => {
+  arr.splice(index - 1, 1);
+  reorder(arr);
+};
+
+/***/ }),
+
+/***/ "./src/update.js":
+/*!***********************!*\
+  !*** ./src/update.js ***!
+  \***********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   clearCompleted: () => (/* binding */ clearCompleted),
+/* harmony export */   updateArr: () => (/* binding */ updateArr),
+/* harmony export */   updateCompleted: () => (/* binding */ updateCompleted)
+/* harmony export */ });
+/* harmony import */ var _add_remove_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./add-remove.js */ "./src/add-remove.js");
+
+
+const updateCompleted = (index, arr, status) => {
+  arr[index - 1].completed = status;
+  (0,_add_remove_js__WEBPACK_IMPORTED_MODULE_0__.saveToLocal)(arr);
+};
+
+const updateArr = (index, newVal, arr) => {
+  arr[index - 1].description = newVal;
+  (0,_add_remove_js__WEBPACK_IMPORTED_MODULE_0__.saveToLocal)(arr);
+};
+
+const clearCompleted = (arr) => {
+  arr = arr.filter((tasksArr) => !tasksArr.completed);
+  (0,_add_remove_js__WEBPACK_IMPORTED_MODULE_0__.reorder)(arr);
+  return arr;
+};
+
 /***/ })
 
 /******/ 	});
@@ -628,73 +762,168 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
+/* harmony import */ var _add_remove_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./add-remove.js */ "./src/add-remove.js");
+/* harmony import */ var _update_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./update.js */ "./src/update.js");
 
 
-const tasksArr = [
-  {
-    description: 'Get out of bed',
-    completed: true,
-    index: 44,
-  },
-  {
-    description: 'Go to the gym',
-    completed: false,
-    index: 0,
-  },
-  {
-    description: 'Have breakfast',
-    completed: false,
-    index: 10,
-  },
-];
+
+
+let tasksArr = [];
+if (localStorage.getItem('myList') === 'undefined') {
+  localStorage.clear();
+}
+if (localStorage.getItem('myList')) {
+  tasksArr = JSON.parse(localStorage.getItem('myList'));
+}
+
+let del = document.createElement('i');
+let edt = document.createElement('i');
+let sav = document.createElement('i');
 
 const ul = document.querySelector('.list-container');
 
-const sortArr = () => {
-  tasksArr.sort((a, b) => a.index - b.index);
-};
-
 const generateList = () => {
-  for (let i = 0; i < tasksArr.length; i += 1) {
-    const li = document.createElement('li');
-    const check = document.createElement('input');
-    const lbl = document.createElement('label');
-    check.type = 'checkbox';
-    check.name = tasksArr[i].index.toString();
-    ul.append(li);
-    li.append(lbl);
-    lbl.append(check);
-    lbl.innerHTML += tasksArr[i].description;
-
-    const threeDots = document.createElement('i');
-    threeDots.className = 'fa-solid fa-ellipsis-vertical';
-    threeDots.classList.add('threedots');
-    li.appendChild(threeDots);
+  if (localStorage.getItem('myList')) {
+    tasksArr = JSON.parse(localStorage.getItem('myList'));
+  }
+  ul.innerHTML = '';
+  if (tasksArr) {
+    for (let i = 0; i < tasksArr.length; i += 1) {
+      const li = document.createElement('li');
+      li.className = 'todo-li-elements';
+      const check = document.createElement('input');
+      const txt = document.createElement('input');
+      txt.type = 'text';
+      txt.className = 'text-box';
+      txt.readOnly = true;
+      del = document.createElement('i');
+      edt = document.createElement('i');
+      sav = document.createElement('i');
+      check.type = 'checkbox';
+      check.className = 'checkbox';
+      del.className = 'fa-solid fa-trash-can fa-xs';
+      edt.className = 'fa-regular fa-pen-to-square fa-xs';
+      sav.className = 'fa-regular fa-floppy-disk fa-xs';
+      sav.style.display = 'none';
+      ul.append(li);
+      li.append(check, txt, del, edt, sav);
+      txt.value += tasksArr[i].description;
+      check.checked = tasksArr[i].completed;
+    }
   }
 };
 
+//* ***************** */
+
+// EventListener for page load ==================
 window.addEventListener('load', () => {
   if (!ul.innerText) {
-    sortArr();
     generateList();
   }
 });
 
 const input = document.getElementById('new-item');
 input.addEventListener('keypress', (e) => {
-  if (e.key === 'Enter') {
-    if (input.value !== '') {
-      tasksArr.push({
-        description: input.value,
-        completed: false,
-        index: tasksArr[tasksArr.length - 1].index + 1,
-      });
-      input.value = '';
-    }
+  if (e.key === 'Enter' && input.value) {
+    (0,_add_remove_js__WEBPACK_IMPORTED_MODULE_1__.addToArr)(input.value, tasksArr);
+    // ******************
+    // reorder(tasksArr);
+    input.value = '';
+    (0,_add_remove_js__WEBPACK_IMPORTED_MODULE_1__.appendList)(tasksArr.length, tasksArr);
   }
 });
 
+const enterIcon = document.querySelector('.fa-arrow-turn-down');
+enterIcon.addEventListener('click', () => {
+  if (input.value) {
+    (0,_add_remove_js__WEBPACK_IMPORTED_MODULE_1__.addToArr)(input.value, tasksArr);
+    // ******************
+    // reorder(tasksArr);
+    input.value = '';
+    (0,_add_remove_js__WEBPACK_IMPORTED_MODULE_1__.appendList)(tasksArr.length, tasksArr);
+  }
+});
 
+const refreshIcon = document.querySelector('.fa-arrows-rotate');
+if (refreshIcon) {
+  refreshIcon.addEventListener('click', () => {
+    generateList();
+  });
+}
+
+const saveFunc = (e) => {
+  const editTextBox = e.target.previousElementSibling.previousElementSibling
+    .previousElementSibling;
+  let elementID;
+  if (editTextBox.value) {
+    e.target.style.display = 'none';
+    e.target.previousElementSibling.style.display = 'block';
+    const delElementDOM = document.getElementsByClassName('todo-li-elements');
+    const delElementArr = e.target.parentNode;
+    for (let j = 0; j < delElementDOM.length; j += 1) {
+      if (delElementDOM[j] === delElementArr) {
+        elementID = j + 1;
+      }
+    }
+    (0,_update_js__WEBPACK_IMPORTED_MODULE_2__.updateArr)(elementID, editTextBox.value, tasksArr);
+    editTextBox.readOnly = true;
+  }
+};
+
+// EventListener for remove button ==================
+document.addEventListener('click', (e) => {
+  if (e.target.className === 'fa-solid fa-trash-can fa-xs') {
+    const delElementDOM = document.getElementsByClassName('todo-li-elements');
+    const delElementArr = e.target.parentNode;
+    let elementID;
+    for (let j = 0; j < delElementDOM.length; j += 1) {
+      if (delElementDOM[j] === delElementArr) {
+        elementID = j + 1;
+      }
+    }
+    e.target.parentNode.remove();
+    (0,_add_remove_js__WEBPACK_IMPORTED_MODULE_1__.removeFromArr)(elementID, tasksArr);
+    // ******************
+    (0,_add_remove_js__WEBPACK_IMPORTED_MODULE_1__.reorder)(tasksArr);
+  }
+
+  // Edit button ==================
+  if (e.target.className === 'fa-regular fa-pen-to-square fa-xs') {
+    e.target.nextElementSibling.style.display = 'block';
+    e.target.style.display = 'none';
+    const editTextBox = e.target.previousElementSibling.previousElementSibling;
+    editTextBox.readOnly = false;
+    editTextBox.focus();
+  }
+
+  // Save button ==================
+  if (e.target.className === 'fa-regular fa-floppy-disk fa-xs') {
+    saveFunc(e);
+  }
+});
+
+// Clear completed ==================
+const clearList = document.querySelector('.clear');
+clearList.addEventListener('click', () => {
+  (0,_update_js__WEBPACK_IMPORTED_MODULE_2__.clearCompleted)(tasksArr);
+  generateList();
+});
+
+// EventListener for check box ==================
+document.addEventListener('change', (e) => {
+  if (e.target.className === 'checkbox') {
+    const edtElementDOM = document.getElementsByClassName('todo-li-elements');
+    const edtElementArr = e.target.parentNode;
+    let elementID;
+    for (let j = 0; j < edtElementDOM.length; j += 1) {
+      if (edtElementDOM[j] === edtElementArr) {
+        elementID = j + 1;
+      }
+    }
+    const status = e.target.checked;
+    (0,_update_js__WEBPACK_IMPORTED_MODULE_2__.updateCompleted)(elementID, tasksArr, status);
+  }
+});
 })();
 
 /******/ })()
