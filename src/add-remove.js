@@ -19,27 +19,33 @@ export const addToArr = (val, arr) => {
 };
 
 export const appendList = (i, arr) => {
-  const ul = document.querySelector('.list-container');
-
   const li = document.createElement('li');
   li.className = 'todo-li-elements';
+
+  const ul = document.querySelector('.list-container');
+  ul.append(li);
+
   const check = document.createElement('input');
+  check.type = 'checkbox';
+  check.className = 'checkbox';
+
   const txt = document.createElement('input');
   txt.type = 'text';
   txt.className = 'text-box';
   txt.readOnly = true;
+  txt.value += arr[i - 1].description;
+
   const del = document.createElement('i');
-  const edt = document.createElement('i');
-  const sav = document.createElement('i');
-  check.type = 'checkbox';
-  check.className = 'checkbox';
   del.className = 'fa-solid fa-trash-can fa-xs';
+
+  const edt = document.createElement('i');
   edt.className = 'fa-regular fa-pen-to-square fa-xs';
+
+  const sav = document.createElement('i');
   sav.className = 'fa-regular fa-floppy-disk fa-xs';
   sav.style.display = 'none';
-  ul.append(li);
+
   li.append(check, txt, del, edt, sav);
-  txt.value += arr[i - 1].description;
 };
 
 export const removeFromArr = (index, arr) => {
