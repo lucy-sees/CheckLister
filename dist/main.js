@@ -86,7 +86,7 @@ li {
   margin-bottom: 5%;
 }
 
-.clear p{
+.clear p {
   text-align: center;
   color: rgb(165, 193, 189);
   padding-top: 5%;
@@ -106,12 +106,10 @@ i {
 }
 
 /* Style for completed tasks */
-input[type="checkbox"]:checked + label {
+.checkbox:checked ~ .text-box {
   text-decoration: line-through;
-  color: #888;
-  margin-right: 1em;
+  color: #92fb9c;
 }
-
 
 .fa-arrow-turn-down {
   transform: rotate(90deg);
@@ -137,7 +135,7 @@ input[type="checkbox"]:checked + label {
 .fa-floppy-disk:hover {
   opacity: 100%;
 }
-`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;EACE,SAAS;EACT,UAAU;AACZ;;AAEA;EACE,2CAA2C;AAC7C;;AAEA;EACE,0BAA0B;EAC1B,WAAW;EACX,eAAe;EACf,WAAW;EACX,gBAAgB;AAClB;;AAEA;;GAEG;;AAEH;EACE,mCAAmC;EACnC,WAAW;EACX,OAAO;EACP,cAAc;EACd,YAAY;EACZ,sBAAsB;EACtB,kBAAkB;EAClB,kBAAkB;EAClB,oBAAoB;EACpB,qCAAqC;EACrC,UAAU;EACV,kBAAkB;AACpB;;AAEA;EACE,gBAAgB;EAChB,UAAU;AACZ;;AAEA;EACE,2CAA2C;EAC3C,eAAe;EACf,kBAAkB;AACpB;;AAEA;EACE,mCAAmC;EACnC,WAAW;EACX,YAAY;EACZ,kBAAkB;EAClB,oBAAoB;EACpB,WAAW;AACb;;AAEA;EACE,WAAW;AACb;;AAEA;EACE,cAAc;EACd,iBAAiB;AACnB;;AAEA;EACE,kBAAkB;EAClB,yBAAyB;EACzB,eAAe;EACf,kBAAkB;AACpB;;AAEA;EACE,0BAA0B;EAC1B,WAAW;EACX,eAAe;AACjB;;AAEA;EACE,eAAe;EACf,YAAY;EACZ,yBAAyB;AAC3B;;AAEA,8BAA8B;AAC9B;EACE,6BAA6B;EAC7B,WAAW;EACX,iBAAiB;AACnB;;;AAGA;EACE,wBAAwB;EACxB,YAAY;AACd;;AAEA;EACE,eAAe;EACf,gBAAgB;EAChB,YAAY;AACd;;AAEA;;;EAGE,YAAY;AACd;;AAEA;;;;;EAKE,aAAa;AACf","sourcesContent":["body {\n  margin: 0;\n  padding: 0;\n}\n\n.body-wrapper {\n  background-color: rgba(168, 12, 155, 0.711);\n}\n\n.list-container {\n  text-transform: capitalize;\n  color: #fff;\n  font-size: 1rem;\n  width: 100%;\n  list-style: none;\n}\n\n/* .check-box {\n  margin-right: 1em;\n} */\n\n.text-box {\n  background-color: rgb(153, 51, 129);\n  color: #fff;\n  flex: 1;\n  margin: 0 10px;\n  padding: 5px;\n  border: 1px solid #ccc;\n  border-radius: 5px;\n  font-style: italic;\n  margin-bottom: 0.7em;\n  box-shadow: #48064bc2 0 0 0 1px inset;\n  width: 80%;\n  align-self: center;\n}\n\nul {\n  list-style: none;\n  padding: 0;\n}\n\nli {\n  border-bottom: 1px solid rgb(103, 103, 103);\n  padding-top: 5%;\n  padding-bottom: 5%;\n}\n\n#new-item {\n  background-color: rgb(153, 51, 150);\n  color: #fff;\n  border: none;\n  font-style: italic;\n  margin-bottom: 0.7em;\n  width: 100%;\n}\n\n::placeholder {\n  color: #fff;\n}\n\n.heading {\n  font-size: 1em;\n  margin-bottom: 5%;\n}\n\n.clear p{\n  text-align: center;\n  color: rgb(165, 193, 189);\n  padding-top: 5%;\n  padding-bottom: 5%;\n}\n\n.clear p:hover {\n  text-decoration: underline;\n  color: #fff;\n  cursor: pointer;\n}\n\ni {\n  cursor: pointer;\n  float: right;\n  color: rgb(255, 253, 253);\n}\n\n/* Style for completed tasks */\ninput[type=\"checkbox\"]:checked + label {\n  text-decoration: line-through;\n  color: #888;\n  margin-right: 1em;\n}\n\n\n.fa-arrow-turn-down {\n  transform: rotate(90deg);\n  opacity: 70%;\n}\n\n.fa-arrows-rotate {\n  margin-top: 1em;\n  margin-left: 5px;\n  opacity: 70%;\n}\n\n.fa-trash-can,\n.fa-pe-to-square,\n.fa-floppy-disk {\n  opacity: 70%;\n}\n\n.fa-arrow-turn-down:hover,\n.fa-arrows-rotate:hover,\n.fa-trash-can:hover,\n.fa-pen-to-square:hover,\n.fa-floppy-disk:hover {\n  opacity: 100%;\n}\n"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;EACE,SAAS;EACT,UAAU;AACZ;;AAEA;EACE,2CAA2C;AAC7C;;AAEA;EACE,0BAA0B;EAC1B,WAAW;EACX,eAAe;EACf,WAAW;EACX,gBAAgB;AAClB;;AAEA;;GAEG;;AAEH;EACE,mCAAmC;EACnC,WAAW;EACX,OAAO;EACP,cAAc;EACd,YAAY;EACZ,sBAAsB;EACtB,kBAAkB;EAClB,kBAAkB;EAClB,oBAAoB;EACpB,qCAAqC;EACrC,UAAU;EACV,kBAAkB;AACpB;;AAEA;EACE,gBAAgB;EAChB,UAAU;AACZ;;AAEA;EACE,2CAA2C;EAC3C,eAAe;EACf,kBAAkB;AACpB;;AAEA;EACE,mCAAmC;EACnC,WAAW;EACX,YAAY;EACZ,kBAAkB;EAClB,oBAAoB;EACpB,WAAW;AACb;;AAEA;EACE,WAAW;AACb;;AAEA;EACE,cAAc;EACd,iBAAiB;AACnB;;AAEA;EACE,kBAAkB;EAClB,yBAAyB;EACzB,eAAe;EACf,kBAAkB;AACpB;;AAEA;EACE,0BAA0B;EAC1B,WAAW;EACX,eAAe;AACjB;;AAEA;EACE,eAAe;EACf,YAAY;EACZ,yBAAyB;AAC3B;;AAEA,8BAA8B;AAC9B;EACE,6BAA6B;EAC7B,cAAc;AAChB;;AAEA;EACE,wBAAwB;EACxB,YAAY;AACd;;AAEA;EACE,eAAe;EACf,gBAAgB;EAChB,YAAY;AACd;;AAEA;;;EAGE,YAAY;AACd;;AAEA;;;;;EAKE,aAAa;AACf","sourcesContent":["body {\r\n  margin: 0;\r\n  padding: 0;\r\n}\r\n\r\n.body-wrapper {\r\n  background-color: rgba(168, 12, 155, 0.711);\r\n}\r\n\r\n.list-container {\r\n  text-transform: capitalize;\r\n  color: #fff;\r\n  font-size: 1rem;\r\n  width: 100%;\r\n  list-style: none;\r\n}\r\n\r\n/* .check-box {\r\n  margin-right: 1em;\r\n} */\r\n\r\n.text-box {\r\n  background-color: rgb(153, 51, 129);\r\n  color: #fff;\r\n  flex: 1;\r\n  margin: 0 10px;\r\n  padding: 5px;\r\n  border: 1px solid #ccc;\r\n  border-radius: 5px;\r\n  font-style: italic;\r\n  margin-bottom: 0.7em;\r\n  box-shadow: #48064bc2 0 0 0 1px inset;\r\n  width: 80%;\r\n  align-self: center;\r\n}\r\n\r\nul {\r\n  list-style: none;\r\n  padding: 0;\r\n}\r\n\r\nli {\r\n  border-bottom: 1px solid rgb(103, 103, 103);\r\n  padding-top: 5%;\r\n  padding-bottom: 5%;\r\n}\r\n\r\n#new-item {\r\n  background-color: rgb(153, 51, 150);\r\n  color: #fff;\r\n  border: none;\r\n  font-style: italic;\r\n  margin-bottom: 0.7em;\r\n  width: 100%;\r\n}\r\n\r\n::placeholder {\r\n  color: #fff;\r\n}\r\n\r\n.heading {\r\n  font-size: 1em;\r\n  margin-bottom: 5%;\r\n}\r\n\r\n.clear p {\r\n  text-align: center;\r\n  color: rgb(165, 193, 189);\r\n  padding-top: 5%;\r\n  padding-bottom: 5%;\r\n}\r\n\r\n.clear p:hover {\r\n  text-decoration: underline;\r\n  color: #fff;\r\n  cursor: pointer;\r\n}\r\n\r\ni {\r\n  cursor: pointer;\r\n  float: right;\r\n  color: rgb(255, 253, 253);\r\n}\r\n\r\n/* Style for completed tasks */\r\n.checkbox:checked ~ .text-box {\r\n  text-decoration: line-through;\r\n  color: #92fb9c;\r\n}\r\n\r\n.fa-arrow-turn-down {\r\n  transform: rotate(90deg);\r\n  opacity: 70%;\r\n}\r\n\r\n.fa-arrows-rotate {\r\n  margin-top: 1em;\r\n  margin-left: 5px;\r\n  opacity: 70%;\r\n}\r\n\r\n.fa-trash-can,\r\n.fa-pe-to-square,\r\n.fa-floppy-disk {\r\n  opacity: 70%;\r\n}\r\n\r\n.fa-arrow-turn-down:hover,\r\n.fa-arrows-rotate:hover,\r\n.fa-trash-can:hover,\r\n.fa-pen-to-square:hover,\r\n.fa-floppy-disk:hover {\r\n  opacity: 100%;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -596,7 +594,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   appendList: () => (/* binding */ appendList),
 /* harmony export */   removeFromArr: () => (/* binding */ removeFromArr),
 /* harmony export */   reorder: () => (/* binding */ reorder),
-/* harmony export */   saveToLocal: () => (/* binding */ saveToLocal)
+/* harmony export */   saveToLocal: () => (/* binding */ saveToLocal),
+/* harmony export */   updateArr: () => (/* binding */ updateArr)
 /* harmony export */ });
 const saveToLocal = (arr) => {
   localStorage.setItem('myList', JSON.stringify(arr));
@@ -620,6 +619,7 @@ const addToArr = (val, arr) => {
 
 const appendList = (i, arr) => {
   const ul = document.querySelector('.list-container');
+
   const li = document.createElement('li');
   li.className = 'todo-li-elements';
   const check = document.createElement('input');
@@ -643,7 +643,13 @@ const appendList = (i, arr) => {
 
 const removeFromArr = (index, arr) => {
   arr.splice(index - 1, 1);
-  reorder(arr);
+  // reorder(arr);
+};
+
+const updateArr = (index, newVal, arr) => {
+  arr[index - 1].description = newVal;
+  // saveToLocal(arr);
+  localStorage.setItem('myList', JSON.stringify(arr));
 };
 
 /***/ }),
@@ -813,9 +819,6 @@ const generateList = () => {
   }
 };
 
-//* ***************** */
-
-// EventListener for page load ==================
 window.addEventListener('load', () => {
   if (!ul.innerText) {
     generateList();
@@ -826,8 +829,6 @@ const input = document.getElementById('new-item');
 input.addEventListener('keypress', (e) => {
   if (e.key === 'Enter' && input.value) {
     (0,_add_remove_js__WEBPACK_IMPORTED_MODULE_1__.addToArr)(input.value, tasksArr);
-    // ******************
-    // reorder(tasksArr);
     input.value = '';
     (0,_add_remove_js__WEBPACK_IMPORTED_MODULE_1__.appendList)(tasksArr.length, tasksArr);
   }
@@ -837,8 +838,6 @@ const enterIcon = document.querySelector('.fa-arrow-turn-down');
 enterIcon.addEventListener('click', () => {
   if (input.value) {
     (0,_add_remove_js__WEBPACK_IMPORTED_MODULE_1__.addToArr)(input.value, tasksArr);
-    // ******************
-    // reorder(tasksArr);
     input.value = '';
     (0,_add_remove_js__WEBPACK_IMPORTED_MODULE_1__.appendList)(tasksArr.length, tasksArr);
   }
@@ -870,7 +869,6 @@ const saveFunc = (e) => {
   }
 };
 
-// EventListener for remove button ==================
 document.addEventListener('click', (e) => {
   if (e.target.className === 'fa-solid fa-trash-can fa-xs') {
     const delElementDOM = document.getElementsByClassName('todo-li-elements');
@@ -883,11 +881,10 @@ document.addEventListener('click', (e) => {
     }
     e.target.parentNode.remove();
     (0,_add_remove_js__WEBPACK_IMPORTED_MODULE_1__.removeFromArr)(elementID, tasksArr);
-    // ******************
     (0,_add_remove_js__WEBPACK_IMPORTED_MODULE_1__.reorder)(tasksArr);
   }
 
-  // Edit button ==================
+  // Edit
   if (e.target.className === 'fa-regular fa-pen-to-square fa-xs') {
     e.target.nextElementSibling.style.display = 'block';
     e.target.style.display = 'none';
@@ -896,20 +893,20 @@ document.addEventListener('click', (e) => {
     editTextBox.focus();
   }
 
-  // Save button ==================
+  // Save edited
   if (e.target.className === 'fa-regular fa-floppy-disk fa-xs') {
     saveFunc(e);
   }
 });
 
-// Clear completed ==================
+// Clear completed
 const clearList = document.querySelector('.clear');
 clearList.addEventListener('click', () => {
   (0,_update_js__WEBPACK_IMPORTED_MODULE_2__.clearCompleted)(tasksArr);
   generateList();
 });
 
-// EventListener for check box ==================
+// check box
 document.addEventListener('change', (e) => {
   if (e.target.className === 'checkbox') {
     const edtElementDOM = document.getElementsByClassName('todo-li-elements');
