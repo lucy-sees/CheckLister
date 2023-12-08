@@ -5,7 +5,7 @@
   <img src="./Lucy.png" alt="logo" width="140"  height="auto" />
   <br/>
 
-<h3><b>To Do list</b></h3>
+<h3><b>CheckLister</b></h3>
 
 </div>
 
@@ -27,9 +27,9 @@
 - [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
-# 📖 To Do list <a name="about-project"></a>
+# 📖 CheckLister <a name="about-project"></a>
 
-**To Do list** In this project, I build a simple HTML list of To Do tasks. This simple web page will be built using webpack and served by a webpack dev server.
+**CheckLister** In this project, I built a simple HTML list of To-Do tasks. This simple web page will be built using Webpack and served by a Webpack dev server.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -59,7 +59,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://lucy-sees.github.io/CheckLister/dist/)
+- [Live Demo Link](https://checklister-com.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -69,7 +69,7 @@ To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need:
+To run this project you need:
 Install Git Bash, Web browser and code editor
 
 ### Setup
@@ -90,8 +90,8 @@ Web Browser
 👤 **Lucy W. Mwangi**
 
 - GitHub: [@lucy-sees](https://github.com/lucy-sees)
-- Twitter: [@\_The_LoneWolf](https://twitter.com/_The_LoneWolf)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/lucy-w-mwangi-83a31b11b/)
+- Twitter: [@Lucy Wanjiru Mwangi](https://twitter.com/lucy_w_mwangi)
+- LinkedIn: [Lucy (Wanjiru) Mwangi](https://www.linkedin.com/in/lucy-wanjiru-mwangi)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -107,7 +107,7 @@ Web Browser
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/lucy-sees/CheckLister/issues/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
