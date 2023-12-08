@@ -1,8 +1,11 @@
 import './style.css';
+import { Dropdown, Collapse, initMDB } from 'mdb-ui-kit';
 import {
   addToArr, appendList, removeFromArr, reorder,
 } from './add-remove.js';
 import { updateCompleted, updateArr, clearCompleted } from './update.js';
+// Initialization for ES Users
+initMDB({ Dropdown, Collapse });
 
 let tasksArr = [];
 if (localStorage.getItem('myList') === 'undefined') {

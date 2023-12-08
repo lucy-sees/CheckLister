@@ -3,8 +3,8 @@ body {
   padding: 0;
 }
 
-.body-wrapper {
-  background-color: rgba(168, 12, 155, 0.711);
+.cardbG {
+  background: rgba(168, 12, 155, 0.711);
 }
 
 .list-container {
@@ -15,12 +15,23 @@ body {
   list-style: none;
 }
 
+.list-container li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 1em;
+  margin-bottom: 0.5em;
+  border-radius: 5px;
+  background-color: rgb(153, 51, 129);
+  box-shadow: #48064bc2 0 0 0 1px inset;
+}
+
 /* .check-box {
   margin-right: 1em;
 } */
 
 .text-box {
-  background-color: rgb(153, 51, 129);
+  background-color: rgb(202, 73, 172);
   color: #fff;
   flex: 1;
   margin: 0 10px;
@@ -79,7 +90,7 @@ li {
 i {
   cursor: pointer;
   float: right;
-  color: rgb(255, 253, 253);
+  color: rgb(121, 86, 156);
 }
 
 /* Style for completed tasks */
